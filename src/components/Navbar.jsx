@@ -12,11 +12,11 @@ const Navbar = ()=>{
     const [visibleNavLink,setVisibleNavLink] = useState(false)
     return (
         <div className="w-full sm:w-32 fixed z-99 sm:flex">
-                <div className="border-b w-full transition-all duration-300 ease-in sm:w-32 flex sm:flex-col px-3 sm:py-5 sm:h-screen">
+                <div className="w-full transition-all duration-300 ease-in sm:w-32 flex sm:flex-col px-3 sm:py-5 sm:h-screen">
                     <div className="logo w-1/6 h-16 my-auto mx-auto flex items-center justify-center bg-amber-400 sm:w-24 sm:h-24 rounded-xl hover:cursor-pointer hover:bg-yellow-300">
                         <h1 className="font-bold ease-in duration-300 hover:scale-110 text-xl">A2S</h1>
                     </div>
-                    <div className="icon flex items-center sm:rounded-xl sm:mt-4 w-4/5 h-24  sm:w-24 m-auto sm:h-5/6 sm:border border-gray-300">
+                    <div className="icon flex items-center sm:rounded-xl sm:mt-4 w-4/5 h-24  sm:w-24 m-auto sm:h-5/6 ">
                         <div className="w-11/12 invisible sm:visible  m-auto flex  sm:flex-col gap-4">
                             <div className="flex invisible sm:visible justify-center">
                                 <span className="text-white text-2xl"><FaHouseChimneyUser /></span>
@@ -45,7 +45,7 @@ const Navbar = ()=>{
                     </div>
                    )}
                 </div>
-                <div className={`w-screen bg-transparent h-screen transition-all ease-in duration-300  sm:invisible flex items-center justify-center absolute bg-zinc-900 ${visibleNavLink?("visible"):("invisible")}`}>
+                <div className={`w-screen backdrop-blur h-screen transition-all ease-in duration-300  sm:invisible flex items-center justify-center absolute ${visibleNavLink?("visible"):("invisible")}`}>
                     <div className={`flex ${visibleNavLink?("scale-100"):("scale-0")} transition-all ease-in duration-300 text-center text-xl font-bold flex-col gap-4`}>
                         <div>
                         <Link><span className="text-white">HOME</span></Link>

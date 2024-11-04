@@ -3,14 +3,16 @@ import Navbar from "./components/Navbar"
 import Banner from "./components/Banner"
 import Services from "./components/Services"
 import Languages from "./components/Languages"
+import Skills from "./components/Skills"
 function App() {
   return (
     <Router>
     <Navbar/>
       <Routes>
-        <Route path="/" element={<Banner services={<Services/>} languages={<Languages/>}/>}/>
+        <Route path="/" element={<Banner skills={<Skills/>} services={<Services/>} languages={<Languages/>}/> }/>
         <Route path="/services" element={<Services/>}/>
         <Route path="/languages" element={<Languages/>}/>
+        <Route path="/skills" element={<Skills/>}/>
       </Routes>
     </Router>
     
