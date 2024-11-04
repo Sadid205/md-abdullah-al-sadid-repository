@@ -12,27 +12,27 @@ const Navbar = ()=>{
     const [visibleNavLink,setVisibleNavLink] = useState(false)
     return (
         <div className="w-full sm:w-32 fixed z-99 sm:flex">
-                <div className="w-full transition-all duration-300 ease-in sm:w-32 flex sm:flex-col px-3 sm:py-5 sm:h-screen">
+                <div className="w-full backdrop-blur transition-all duration-300 ease-in sm:w-32 flex sm:flex-col px-3 sm:py-5 sm:h-screen">
                     <div className="logo w-1/6 h-16 my-auto mx-auto flex items-center justify-center bg-amber-400 sm:w-24 sm:h-24 rounded-xl hover:cursor-pointer hover:bg-yellow-300">
                         <h1 className="font-bold ease-in duration-300 hover:scale-110 text-xl">A2S</h1>
                     </div>
                     <div className="icon flex items-center sm:rounded-xl sm:mt-4 w-4/5 h-24  sm:w-24 m-auto sm:h-5/6 ">
-                        <div className="w-11/12 invisible sm:visible  m-auto flex  sm:flex-col gap-4">
-                            <div className="flex invisible sm:visible justify-center">
+                        <div className="w-11/12 bg-amber-500 py-4  rounded-full invisible sm:visible  m-auto flex  sm:flex-col gap-4">
+                            <Link className="flex hover:scale-125 transition-all ease-in duration-200 invisible sm:visible justify-center">
                                 <span className="text-white text-2xl"><FaHouseChimneyUser /></span>
-                            </div>
-                            <div className="flex invisible sm:visible justify-center">
+                            </Link>
+                            <Link className="flex hover:scale-125 transition-all ease-in duration-200 invisible sm:visible justify-center">
                                 <span className="text-white text-2xl"><IoIosColorPalette /></span>
-                            </div>
-                            <div className="flex invisible sm:visible justify-center">
+                            </Link>
+                            <Link className="flex hover:scale-125 transition-all ease-in duration-200 invisible sm:visible justify-center">
                                 <span className="text-white text-2xl"><AiTwotoneMail /></span>
-                            </div>
-                            <div className="flex invisible sm:visible justify-center">
+                            </Link>
+                            <Link className="flex hover:scale-125 transition-all ease-in duration-200 invisible sm:visible justify-center">
                                 <span className="text-white text-2xl"><SiBookstack /></span>
-                            </div>
-                            <div className="flex invisible sm:visible justify-center">
+                            </Link>
+                            <Link className="flex hover:scale-125 transition-all ease-in duration-200 invisible sm:visible justify-center">
                                 <span className="text-white text-2xl"><FaFileDownload /></span>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                    {visibleNavLink?(
