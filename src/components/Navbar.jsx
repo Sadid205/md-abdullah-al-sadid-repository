@@ -17,7 +17,7 @@ const Navbar = ()=>{
                         <h1 className="font-bold ease-in duration-300 hover:scale-110 text-xl">A2S</h1>
                     </div>
                     <div className="icon flex items-center sm:rounded-xl sm:mt-4 w-4/5 h-24  sm:w-24 m-auto sm:h-5/6 ">
-                        <div className="w-11/12 bg-amber-500 py-4  rounded-full invisible sm:visible  m-auto flex  sm:flex-col gap-4">
+                        <div className="bg-amber-500 p-4  rounded-full invisible sm:visible  m-auto flex  sm:flex-col gap-4">
                             <Link className="flex hover:scale-125 transition-all ease-in duration-200 invisible sm:visible justify-center">
                                 <span className="text-white text-2xl"><FaHouseChimneyUser /></span>
                             </Link>
