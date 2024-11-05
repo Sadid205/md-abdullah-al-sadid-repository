@@ -48,19 +48,19 @@ const Navbar = ()=>{
                 <div className={`w-screen backdrop-blur h-screen transition-all ease-in duration-300  sm:invisible flex items-center justify-center absolute ${visibleNavLink?("visible"):("invisible")}`}>
                     <div className={`flex ${visibleNavLink?("scale-100"):("scale-0")} transition-all ease-in duration-300 text-center text-xl font-bold flex-col gap-4`}>
                         <div>
-                        <Link><span className="text-white">HOME</span></Link>
+                        <Link><span className="text-white hover:text-amber-500 transition-all ease-in duration-100">HOME</span></Link>
                         </div>
                         <div>
-                        <Link><span className="text-white">PORTFOLIO</span></Link>
+                        <Link><span className="text-white hover:text-amber-500 transition-all ease-in duration-100">PORTFOLIO</span></Link>
                         </div>
                         <div>
-                        <Link><span className="text-white">CONTACT</span></Link>
+                        <Link><span className="text-white hover:text-amber-500 transition-all ease-in duration-100">CONTACT</span></Link>
                         </div>
                         <div>
-                        <Link><span className="text-white">BLOG</span></Link>
+                        <Link><span className="text-white hover:text-amber-500 transition-all ease-in duration-100">BLOG</span></Link>
                         </div>
                         <div>
-                        <Link><span className="text-white">DOWNLOAD CV</span></Link>
+                        <Link><span className="text-white hover:text-amber-500 transition-all ease-in duration-100">DOWNLOAD CV</span></Link>
                         </div>
                     </div>
                 </div>
