@@ -26,7 +26,7 @@ const Projects = ()=>{
             </div>
             <div className="flex gap-4 items-center justify-center flex-wrap">
                 {categories.map((category,index)=>(
-                    <button className="border-2 hover:rotate-6 transition-all ease-in hover:scale-110 uppercase font-bold p-2 rounded-full text-gray-200 border-amber-400" key={index} onClick={()=> filterItems(category)}>
+                    <button className="border-2 z-50 hover:rotate-6 transition-all ease-in hover:scale-110 uppercase font-bold p-2 rounded-full text-gray-200 border-amber-400" key={index} onClick={()=> filterItems(category)}>
                         {category}
                     </button>
                 ))}
