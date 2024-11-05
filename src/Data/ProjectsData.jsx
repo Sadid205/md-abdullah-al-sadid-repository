@@ -48,7 +48,7 @@ export const ProjectsData = [
     {
         id:6,
         cover:"../../src/assets/users.png",
-        name:"A2S",
+        name:"Users",
         category:"Design",
         description:"This is an user's component design.",
         github_link:"https://github.com/Sadid205/Users",
