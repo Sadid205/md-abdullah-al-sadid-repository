@@ -11,7 +11,7 @@ import {useState } from "react";
 const Navbar = ()=>{
     const [visibleNavLink,setVisibleNavLink] = useState(false)
     return (
-        <div className="w-full sm:w-32 fixed z-99 sm:flex">
+        <div className="w-full sm:w-32 fixed z-50 sm:flex">
                 <div className="w-full backdrop-blur transition-all duration-300 ease-in sm:w-32 flex sm:flex-col px-3 sm:py-5 sm:h-screen">
                     <div className="logo w-1/6 h-16 my-auto mx-auto flex items-center justify-center bg-amber-400 sm:w-24 sm:h-24 rounded-xl hover:cursor-pointer hover:bg-yellow-300">
                         <h1 className="font-bold ease-in duration-300 hover:scale-110 text-xl">A2S</h1>

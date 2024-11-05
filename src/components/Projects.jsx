@@ -34,7 +34,7 @@ const Projects = ()=>{
             <div className="flex mt-10 flex-wrap gap-4">
                 {
                     projects.map((item,index)=>(
-                        <div className="w-80 hover:cursor-pointer duration-300 relative -z-50 transition-all ease-in  m-auto h-72" key={index}>
+                        <div className="w-80 hover:cursor-pointer duration-300 relative  transition-all ease-in  m-auto h-72" key={index}>
                             <div className="w-full h-full">
                                 <img className="w-full h-full object-cover" src={item.cover} alt="projectsIMG" />
                             </div>
