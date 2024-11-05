@@ -12,7 +12,7 @@ export const data = [
     {
         number:"03",
         title:"FULL-STACK DEVELOPMENT",
-        description:"I have experiences of building full-stack web-applications.I can develop both front-end and backend of an applications.To build front-end I usually use React and TailwindCSS and for the backend, I use Django which is most popular framwwork at this moment."
+        description:"I have experiences of building full-stack web-applications.I can develop both front-end and backend of an applications.To build front-end I usually use React and TailwindCSS and for the backend, I use Django which is most popular framework at this moment."
     },
     {
         number:"04",

@@ -1,7 +1,7 @@
 import backgroundImage from "../../src/assets/portfoliobg.jpg";
 import ProfileImg from "../../src/assets/Profile.jpg"
 import AutoTyper from "./AutoTyper";
-const Banner = ({services,languages,skills,education,projects})=>{
+const Banner = ({services,languages,contact,skills,education,projects})=>{
     return (
         <div className="h-full sm:w-11/12 sm:ms-auto max-h-screen overflow-y-auto">
             <div style={{height:"50vh"}} className="rounded-xl">
@@ -26,6 +26,7 @@ const Banner = ({services,languages,skills,education,projects})=>{
         {skills}
         {education}
         {projects}
+        {contact}
         </div>
     )
 }

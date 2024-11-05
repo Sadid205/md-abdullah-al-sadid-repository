@@ -7,6 +7,7 @@ import { GiSkills } from "react-icons/gi";
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import { MdCastForEducation } from "react-icons/md";
+import { IoIosContact } from "react-icons/io";
 import { Link } from "react-router-dom";
 import {useState } from "react";
 // import HomePage from "./HomePage";
@@ -65,6 +66,14 @@ const Navbar = ()=>{
                                     <MdCastForEducation />
                                     <div className="absolute  -top-1 -right-20">
                                         <p className="text-xs opacity-0 group-hover:opacity-100 transition-all ease-in duration-200 font-bold text-blue-400">EDUCATION</p>
+                                    </div>
+                                </div>
+                            </Link>
+                            <Link to={"/contact"} className="flex hover:scale-125 transition-all ease-in duration-200 invisible sm:visible justify-center">
+                                <div className="text-white group relative text-2xl">
+                                    <IoIosContact  />
+                                    <div className="absolute  -top-1 -right-14">
+                                        <p className="text-xs opacity-0 group-hover:opacity-100 transition-all ease-in duration-200 font-bold text-blue-400">CONTACT</p>
                                     </div>
                                 </div>
                             </Link>
