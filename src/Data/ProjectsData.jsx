@@ -1,9 +1,9 @@
-import CPHBooking from "../../src/assets/coastal-peace.png"
-import CricketSocrer from "../../src/assets/cricket-scorer.png"
-import AkashBariHolidays from "../../src/assets/akash-bari-travel.png"
-import StartupLand from "../../src/assets/start-up-land.png"
-import Bitcoin from "../../src/assets/bit-coin.png"
-import Users from "../../src/assets/users.png"
+import CPHBooking from "/assets/coastal-peace.png"
+import CricketSocrer from "/assets/cricket-scorer.png"
+import AkashBariHolidays from "/assets/akash-bari-travel.png"
+import StartupLand from "/assets/start-up-land.png"
+import Bitcoin from "/assets/bit-coin.png"
+import Users from "/assets/users.png"
 export const ProjectsData = [
     {
         id:1,

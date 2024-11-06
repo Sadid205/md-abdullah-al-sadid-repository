@@ -1,5 +1,5 @@
-import backgroundImage from "../../src/assets/portfoliobg.jpg";
-import ProfileImg from "../../src/assets/Profile.jpg"
+import backgroundImage from "/assets/portfoliobg.jpg";
+import ProfileImg from "/assets/Profile.jpg"
 import AutoTyper from "./AutoTyper";
 const Banner = ({services,languages,contact,skills,education,projects})=>{
     return (
