@@ -1,8 +1,13 @@
-import profileImage from "../../src/assets/Profile.jpg"
+import CPHBooking from "../../src/assets/coastal-peace.png"
+import CricketSocrer from "../../src/assets/cricket-scorer.png"
+import AkashBariHolidays from "../../src/assets/akash-bari-travel.png"
+import StartupLand from "../../src/assets/start-up-land.png"
+import Bitcoin from "../../src/assets/bit-coin.png"
+import Users from "../../src/assets/users.png"
 export const ProjectsData = [
     {
         id:1,
-        cover:"../../src/assets/coastal-peace.png",
+        cover:CPHBooking,
         name:"Coastal Peace Hotel Booking",
         category:"Development",
         description:"This is a hotel booking website where logged-in users can book their fevorite hotel",
@@ -11,7 +16,7 @@ export const ProjectsData = [
     },
     {
         id:2,
-        cover:"../../src/assets/cricket-scorer.png",
+        cover:CricketSocrer,
         name:"Cricket Scorer",
         category:"Development",
         description:"This is online cricket score cutting web-applications where logged-in users can create there own team and count score easily.",
@@ -20,7 +25,7 @@ export const ProjectsData = [
     },
     {
         id:3,
-        cover:"../../src/assets/akash-bari-travel.png",
+        cover:AkashBariHolidays,
         name:"Akashbari Holidays",
         category:"Frontend",
         description:"This is travel website's front-end design by react.",
@@ -29,7 +34,7 @@ export const ProjectsData = [
     },
     {
         id:4,
-        cover:"../../src/assets/start-up-land.png",
+        cover:StartupLand,
         name:"StartupLand",
         category:"Frontend",
         description:"This is a startupland website's front-end  design by react and tailwindcss",
@@ -38,7 +43,7 @@ export const ProjectsData = [
     },
     {
         id:5,
-        cover:"../../src/assets/bit-coin.png",
+        cover:Bitcoin,
         name:"Bitcoin",
         category:"Design",
         description:"This is a bitcoin component's design.",
@@ -47,7 +52,7 @@ export const ProjectsData = [
     },
     {
         id:6,
-        cover:"../../src/assets/users.png",
+        cover:Users,
         name:"Users",
         category:"Design",
         description:"This is an user's component design.",

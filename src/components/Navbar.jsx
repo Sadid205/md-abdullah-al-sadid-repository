@@ -118,6 +118,9 @@ const Navbar = ()=>{
                         <Link to={"/education"}><span className="text-white hover:text-amber-500 transition-all ease-in duration-100">EDUCATION</span></Link>
                         </div>
                         <div>
+                        <Link to={"/contact"}><span className="text-white hover:text-amber-500 transition-all ease-in duration-100">CONTACT</span></Link>
+                        </div>
+                        <div>
                         <Link><span className="text-white hover:text-amber-500 transition-all ease-in duration-100">DOWNLOAD CV</span></Link>
                         </div>
                     </div>
