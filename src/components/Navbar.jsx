@@ -77,7 +77,7 @@ const Navbar = ()=>{
                                     </div>
                                 </div>
                             </Link>
-                            <Link className="flex hover:scale-125 transition-all ease-in duration-200 invisible sm:visible justify-center">
+                            <Link to={"https://drive.google.com/uc?export=download&id=1Udv05cbu2-8yNAlnqQb3p39JJzbgs3FT"} className="flex hover:scale-125 transition-all ease-in duration-200 invisible sm:visible justify-center">
                                 <div className="text-white group relative text-2xl">
                                     <FaFileDownload />
                                     <div className="absolute  -top-1 -right-24">
@@ -121,7 +121,7 @@ const Navbar = ()=>{
                         <Link to={"/contact"}><span className="text-white hover:text-amber-500 transition-all ease-in duration-100">CONTACT</span></Link>
                         </div>
                         <div>
-                        <Link><span className="text-white hover:text-amber-500 transition-all ease-in duration-100">DOWNLOAD CV</span></Link>
+                        <Link to={"https://drive.google.com/uc?export=download&id=1Udv05cbu2-8yNAlnqQb3p39JJzbgs3FT"}><span className="text-white hover:text-amber-500 transition-all ease-in duration-100">DOWNLOAD CV</span></Link>
                         </div>
                     </div>
                 </div>
