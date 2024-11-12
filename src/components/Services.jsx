@@ -2,7 +2,7 @@ import { data } from "../Data/ServicesData"
 
 const Services = ()=>{
     return (
-        <div className="h-full sm:ms-auto">
+        <div className="h-full sm:w-11/12 sm:ms-auto">
            <div className="flex mb-8 justify-between p-2 border-b border-dashed">
             <h1 className="text-gray-600 font-bold text-xl">SERVICES</h1>
                 <h1 className="text-gray-600 font-bold text-xl">01</h1>

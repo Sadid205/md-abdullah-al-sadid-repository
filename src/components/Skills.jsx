@@ -1,6 +1,6 @@
 const Skills = () =>{
     return (
-        <div className="h-full sm:ms-auto">
+        <div className="h-full sm:w-11/12 sm:ms-auto">
              <div className="border-b flex justify-between mb-8 mt-4 border-dashed">
                 <h1 className="font-bold text-xl text-gray-500">SKILLS</h1>
                 <h1 className="text-gray-600 font-bold text-xl">03</h1>

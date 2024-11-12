@@ -14,12 +14,13 @@ import {useState } from "react";
 const Navbar = ()=>{
     const [visibleNavLink,setVisibleNavLink] = useState(false)
     const location = useLocation()
+    // style={{backdropFilter:'blur(2px)'}}
     return (
-        <div className="w-full sm:w-32 fixed z-40 sm:flex">
-                <div style={{backdropFilter:'blur(2px)'}} className="w-full transition-all duration-300 ease-in sm:w-32 flex sm:flex-col px-3 sm:py-5 sm:h-screen">
-                    <div className="logo w-1/6 h-16 my-auto mx-auto flex items-center justify-center bg-amber-400 sm:w-24 sm:h-24 rounded-xl hover:cursor-pointer hover:bg-yellow-300">
+        <div className="w-full backdrop-blur-sm sm:backdrop-blur-none sm:w-32 fixed z-40">
+                <div className="w-full transition-all duration-300 ease-in sm:w-32 flex sm:flex-col px-3 sm:py-5 sm:h-screen">
+                    <Link to={"/"} className="logo w-1/6 h-16 my-auto mx-auto flex items-center justify-center bg-amber-400 sm:w-24 sm:h-24 rounded-xl hover:cursor-pointer hover:bg-yellow-300">
                         <h1 className="font-bold ease-in duration-300 hover:scale-110 text-xl">A2S</h1>
-                    </div>
+                    </Link>
                     <div className="icon flex items-center sm:rounded-xl sm:mt-4 w-4/5 h-24  sm:w-24 m-auto sm:h-5/6 ">
                         <div className="bg-amber-500 p-4  rounded-full invisible sm:visible  m-auto flex  sm:flex-col gap-4">
                             <Link to={"/"} className={`flex ${location.pathname=="/"?("scale-125"):("")} hover:scale-125 transition-all ease-in duration-100 invisible sm:visible justify-center`}>
@@ -99,7 +100,7 @@ const Navbar = ()=>{
                     </div>
                    )}
                 </div>
-                <div style={{backdropFilter:'blur(2px)'}} className={`w-screen h-screen transition-all ease-in duration-300  sm:invisible flex items-center justify-center absolute ${visibleNavLink?("visible"):("invisible")}`}>
+                <div className={`w-screen h-screen transition-all ease-in duration-300  sm:invisible flex items-center justify-center ${visibleNavLink?("relative"):("absolute")}`}>
                     <div className={`flex ${visibleNavLink?("scale-100"):("scale-0")} transition-all  ease-in duration-300 text-center text-xl font-bold flex-col gap-4`}>
                     <div className={`hover:scale-125 relative ${location.pathname=="/"?("scale-125"):("")} transition-all ease-in duration-100`}>
                         <Link to={"/"}><span className={`text-amber-400 ${location.pathname=="/"?("text-gray-500"):("")} hover:text-gray-500 transition-all ease-in duration-100`}>HOME</span></Link>
@@ -153,6 +154,4 @@ const Navbar = ()=>{
             </div>
     )
 }
-
-
 export default Navbar;

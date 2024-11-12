@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Contact = ()=>{
     return (
-        <div className="h-full w-11/12 m-auto flex flex-col gap-4 sm:ms-auto">
+        <div className="h-full sm:w-11/12 flex flex-col gap-4 sm:ms-auto">
             <div className="flex mb-8 justify-between p-2 border-b border-dashed">
                 <h1 className="text-gray-600 font-bold text-xl">CONTACT</h1>
                 <h1 className="text-gray-600 font-bold text-xl">06</h1>

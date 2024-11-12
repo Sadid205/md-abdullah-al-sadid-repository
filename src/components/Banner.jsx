@@ -2,7 +2,7 @@ import backgroundImage from "/assets/portfoliobg.jpg";
 import AutoTyper from "./AutoTyper";
 const Banner = ({services,languages,contact,skills,education,projects})=>{
     return (
-        <div className="h-full sm:w-11/12 sm:ms-auto max-h-screen overflow-y-auto">
+        <div className="h-full sm:ms-auto max-h-screen">
             <div style={{height:"50vh"}} className="rounded-xl">
             <div style={{
             backgroundImage:`url(${backgroundImage})`,
