@@ -100,6 +100,7 @@ const Navbar = ()=>{
                     </div>
                    )}
                 </div>
+                <div className={`${visibleNavLink?("scale-100"):("scale-0 hidden")}transition-all ease-in duration-300`}>
                 <div className={`w-screen h-screen transition-all ease-in duration-300  sm:invisible flex items-center justify-center ${visibleNavLink?("relative"):("absolute")}`}>
                     <div className={`flex ${visibleNavLink?("scale-100"):("scale-0")} transition-all  ease-in duration-300 text-center text-xl font-bold flex-col gap-4`}>
                     <div className={`hover:scale-125 relative ${location.pathname=="/"?("scale-125"):("")} transition-all ease-in duration-100`}>
@@ -149,8 +150,7 @@ const Navbar = ()=>{
                         </div>
                     </div>
                 </div>
-               <div>
-               </div>
+                </div>
             </div>
     )
 }

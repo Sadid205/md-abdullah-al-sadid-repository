@@ -7,6 +7,7 @@ import Skills from "./components/Skills"
 import Education from "./components/Education"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
+import ProjectDetails from "./components/ProjectDetails"
 function App() {
   return (
     <Router>
@@ -19,9 +20,9 @@ function App() {
         <Route path="/education" element={<Education/>}/>
         <Route path="/projects" element={<Projects/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/project-details/:project_id" element={<ProjectDetails/>}/>
       </Routes>
     </Router>
-    
   )
 }
 

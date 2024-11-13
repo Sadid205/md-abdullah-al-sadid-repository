@@ -45,6 +45,7 @@ const Projects = ()=>{
                                 <div className="flex gap-4">
                                 <Link className="text-xl transition-all ease-in duration-300 hover:scale-125" to={item.github_link}><FaGithub /></Link>
                                 <Link className="border hover:scale-110 border-gray-500 font-semibold text-gray-600 bg-gray-300 transition-all ease-in duration-300 rounded-full px-2 text-sm" to={item.web_link}>Visit</Link>
+                                <Link to={`/project-details/${item.id}/`} className="px-2 rounded-full font-semibold text-sm text-gray-700 border border-blue-300 border hover:scale-110 transition-all ease-in duration-300 bg-gray-300">Details</Link>
                                 </div>
                             </div>
                         </div>
