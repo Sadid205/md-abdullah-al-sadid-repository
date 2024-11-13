@@ -40,7 +40,7 @@ const ProjectDetails = () => {
                             <h2 className="text-3xl font-bold text-gray-400 mb-2">{projectData && projectData.name}</h2>
                             <p className="text-gray-400 font-semibold mb-4">Category : {projectData && projectData.category}</p>
                             <div className="mb-4 items-center flex gap-4">
-                                <Link className="text-gray-400" to={projectData&&projectData.github_link}>
+                                <Link className="text-gray-400 font-semibold border border-amber-400 rounded rounded-full px-2 transition-all ease-in duration-100 hover:scale-110" to={projectData&&projectData.github_link}>
                                    GitHub
                                 </Link>
                                 <Link className="text-gray-400 font-semibold border border-amber-400 rounded rounded-full px-2 transition-all ease-in duration-100 hover:scale-110" to={projectData&&projectData.web_link}>
