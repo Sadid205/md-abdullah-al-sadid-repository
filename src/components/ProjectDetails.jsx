@@ -9,10 +9,11 @@ const ProjectDetails = () => {
         if(projectData){
             setImageAndTitleUrl(projectData.details.img_and_title[0])
         }
-    })
-    const changeImage = (src)=>{
-        setImageAndTitleUrl(src)
-        
+    },[projectData])
+    const changeImage =(e,src)=>{
+        e.preventDefault()
+        setImageAndTitleUrl(src)        
+        console.log(e)
     }
     console.log(projectData)
     return (
@@ -28,7 +29,7 @@ const ProjectDetails = () => {
                             <div className="flex h-1/2 gap-4 py-4 justify-center overflow-x-auto">
                                 {
                                     projectData && projectData.details.img_and_title.map((item,index)=>{
-                                        return <img onClick={()=> changeImage(item)} key={index} src={item.img_link} alt="Thumbnail" className="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300" />
+                                        return <img onClick={(e)=> changeImage(e,item)} key={index} src={item.img_link} alt="Thumbnail" className="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300" />
                                     })
                                     // 
                                 }
@@ -52,7 +53,7 @@ const ProjectDetails = () => {
                             <p className="text-gray-400 font-semibold mb-6">Description : {projectData && projectData.description}</p>
                             <div>
                                 <h3 className="text-lg font-semibold mb-2 text-gray-400">Technology :</h3>
-                                <div className="overflow-x-auto flex">
+                                <div className="overflow-x-auto gap-4 flex">
                                     {projectData && projectData.details.technology.map((tech,index)=>{
                                         return <div key={index}  className="w-32 text-center">
                                         <img width={200} className="" src={tech.tech_logo} alt="tech_logo" />
@@ -63,7 +64,13 @@ const ProjectDetails = () => {
                             </div>
                         </div>
                     </div>
+                <div className="mt-6 max-h-96 overflow-y-auto">
+                    <h1 className="text-gray-400 mb-4 text-3xl font-bold text-center">Key Features</h1>
+                    {projectData && projectData.details.key_features.map((features,index)=>{
+                    return <p  key={index} className="bg-sky-300 rounded-full hover:cursor-pointer hover:bg-transparent hover:text-gray-200 transition-all ease-in duration-200 p-2 text-gray-600 mb-2 font-semibold">⇒ {features}</p>
+                    })}
                 </div>
+            </div>
         </div>
     )
 }
