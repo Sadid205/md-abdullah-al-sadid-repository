@@ -1,78 +1,183 @@
-import { useEffect, useState } from "react"
-import {ProjectsData} from "../Data/ProjectsData" 
-import { Link, useParams } from "react-router-dom"
-const ProjectDetails = () => {
-    const [imageAndTitle,setImageAndTitleUrl] = useState("") 
-    const {project_id} = useParams()
-    const projectData = ProjectsData.find((project)=>project.id==project_id)
-    useEffect(()=>{
-        if(projectData){
-            setImageAndTitleUrl(projectData.details.img_and_title[0])
-        }
-    },[projectData])
-    const changeImage =(e,src)=>{
-        e.preventDefault()
-        setImageAndTitleUrl(src)        
-        console.log(e)
-    }
-    console.log(projectData)
-    return (
-        <div className="h-full top-24 sm:w-11/12 sm:ms-auto">
-           <div className="container mx-auto px-4 py-8">
-                    <div className="flex flex-wrap -mx-4">
-                        {/* Product Images */}
-                        <div className="w-full md:w-1/2 px-4 mb-8">
-                            <img style={{height:'50%'}} src={imageAndTitle.img_link} alt="Product" className="w-full rounded-lg shadow-md mb-4" id="mainImage" />
-                            <div className="">
-                                <p className="text-gray-400 font-semibold">{imageAndTitle.title}</p>
-                            </div>
-                            <div className="flex h-1/2 gap-4 py-4 justify-center overflow-x-auto">
-                                {
-                                    projectData && projectData.details.img_and_title.map((item,index)=>{
-                                        return <img onClick={(e)=> changeImage(e,item)} key={index} src={item.img_link} alt="Thumbnail" className="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300" />
-                                    })
-                                    // 
-                                }
-                            </div>
-                        </div>
-                        {/* Product Details */}
-                        <div className="w-full md:w-1/2 px-4">
-                            <h2 className="text-3xl font-bold text-gray-400 mb-2">{projectData && projectData.name}</h2>
-                            <p className="text-gray-400 font-semibold mb-4">Category : {projectData && projectData.category}</p>
-                            <div className="mb-4 items-center flex gap-4">
-                                <Link className="text-gray-400 font-semibold border border-amber-400 rounded rounded-full px-2 transition-all ease-in duration-100 hover:scale-110" to={projectData&&projectData.github_link}>
-                                   GitHub
-                                </Link>
-                                <Link className="text-gray-400 font-semibold border border-amber-400 rounded rounded-full px-2 transition-all ease-in duration-100 hover:scale-110" to={projectData&&projectData.web_link}>
-                                Live link
-                                </Link>
-                            </div>
-                            <div className="flex items-center mb-4">
-                                <span className="text-gray-400 font-semibold">Rating : {projectData && projectData.rating}</span>
-                            </div>
-                            <p className="text-gray-400 font-semibold mb-6">Description : {projectData && projectData.description}</p>
-                            <div>
-                                <h3 className="text-lg font-semibold mb-2 text-gray-400">Technology :</h3>
-                                <div className="overflow-x-auto gap-4 flex">
-                                    {projectData && projectData.details.technology.map((tech,index)=>{
-                                        return <div key={index}  className="w-32 text-center">
-                                        <img width={200} className="" src={tech.tech_logo} alt="tech_logo" />
-                                        <h4 className="font-semibold text-gray-400">{tech.tech_name}</h4>
-                                </div>
-                                    })}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <div className="mt-6 max-h-96 overflow-y-auto">
-                    <h1 className="text-gray-400 mb-4 text-3xl font-bold text-center">Key Features</h1>
-                    {projectData && projectData.details.key_features.map((features,index)=>{
-                    return <p  key={index} className="bg-sky-300 rounded-full hover:cursor-pointer hover:bg-transparent hover:text-gray-200 transition-all ease-in duration-200 p-2 text-gray-600 mb-2 font-semibold">⇒ {features}</p>
-                    })}
-                </div>
-            </div>
-        </div>
-    )
-}
+import { useEffect, useState } from "react";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { Link, useParams } from "react-router-dom";
+// ProjectsData ইম্পোর্ট ঠিক রেখো
+// import { ProjectsData } from "../Data/ProjectsData";
 
-export default ProjectDetails
+const ProjectDetails = () => {
+  const { project_id } = useParams();
+  const [selectedImgObj, setSelectedImgObj] = useState(null);
+  
+  // রেজুমি এবং আগের কন্টেক্সট অনুযায়ী ডামি ডাটা স্ট্রাকচার (যা তোমার ProjectsData তে থাকবে)
+  const projectData = {
+    id: 1,
+    name: "POS + E-Commerce Platform",
+    category: "Enterprise SaaS / Full-Stack",
+    description: "Built an enterprise-level POS & e-commerce system that handles inventory, HRM, and finance analytics. It features a modular architecture with 16+ Django apps and production-ready Docker deployment.",
+    github_link: "#",
+    web_link: "https://cloudnextgen.co.uk/",
+    rating: "4.9",
+    details: {
+      img_and_title: [
+        { img_link: "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80", title: "Dashboard Overview" },
+        { img_link: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80", title: "Inventory Management" },
+        { img_link: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80", title: "Sales Analytics" },
+      ],
+      technology: [
+        { tech_name: "Django", tech_logo: "https://cdn.worldvectorlogo.com/logos/django.svg" },
+        { tech_name: "Next.js", tech_logo: "https://cdn.worldvectorlogo.com/logos/next-js.svg" },
+        { tech_name: "PostgreSQL", tech_logo: "https://cdn.worldvectorlogo.com/logos/postgresql.svg" },
+        { tech_name: "Docker", tech_logo: "https://cdn.worldvectorlogo.com/logos/docker-3.svg" },
+      ],
+      key_features: [
+        "16+ Modular Django Applications",
+        "Role-Based Access Control (RBAC)",
+        "Real-time Inventory Tracking",
+        "Automated PDF/Excel Reporting",
+        "CI/CD Pipeline with GitHub Actions",
+        "JWT Authentication & Secure API"
+      ]
+    }
+  };
+
+  useEffect(() => {
+    if (projectData?.details?.img_and_title?.length > 0) {
+      setSelectedImgObj(projectData.details.img_and_title[0]);
+    }
+  }, [project_id]);
+
+  if (!projectData) return <div style={{ color: "#e8ddd0", textAlign: "center", padding: "100px" }}>Project Not Found</div>;
+
+  return (
+    <div style={{
+      background: "#0d1726",
+      minHeight: "100vh",
+      padding: "100px 20px 60px",
+      fontFamily: "'DM Sans', sans-serif",
+      color: "#e8ddd0"
+    }}>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap');
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #35577D; border-radius: 10px; }
+      `}</style>
+
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        
+        {/* Header Section */}
+        <div style={{ marginBottom: "40px", borderBottom: "1px solid rgba(53, 87, 125, 0.2)", paddingBottom: "20px" }}>
+           <Link to="/projects" style={{ color: "#DB9F75", textDecoration: "none", fontSize: "14px", display: "flex", alignItems: "center", gap: "8px", marginBottom: "15px" }}>
+             ← Back to Portfolio
+           </Link>
+           <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "42px", fontWeight: 700, margin: 0 }}>
+             {projectData.name}
+           </h1>
+           <p style={{ color: "#35577D", letterSpacing: "0.2em", fontSize: "12px", marginTop: "10px", textTransform: "uppercase" }}>
+             Case Study / {projectData.category}
+           </p>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", gap: "50px" }}>
+          
+          {/* Left: Media Gallery */}
+          <div>
+            <div style={{ 
+              borderRadius: "16px", overflow: "hidden", border: "1px solid rgba(219, 159, 117, 0.2)",
+              background: "#141e30", height: "400px" 
+            }}>
+              <img 
+                src={selectedImgObj?.img_link} 
+                alt="Main View" 
+                style={{ width: "100%", height: "100%", objectFit: "cover", transition: "0.5s ease" }} 
+              />
+            </div>
+            <p style={{ color: "rgba(200, 210, 225, 0.5)", fontSize: "13px", marginTop: "12px", textAlign: "center", fontStyle: "italic" }}>
+              {selectedImgObj?.title}
+            </p>
+            
+            <div style={{ display: "flex", gap: "12px", marginTop: "20px", justifyContent: "center", overflowX: "auto", paddingBottom: "10px" }}>
+              {projectData.details.img_and_title.map((item, index) => (
+                <img
+                  key={index}
+                  onClick={() => setSelectedImgObj(item)}
+                  src={item.img_link}
+                  alt="thumb"
+                  style={{
+                    width: "80px", height: "60px", objectFit: "cover", borderRadius: "8px",
+                    cursor: "pointer", border: selectedImgObj?.img_link === item.img_link ? "2px solid #DB9F75" : "1px solid rgba(53, 87, 125, 0.3)",
+                    opacity: selectedImgObj?.img_link === item.img_link ? 1 : 0.6,
+                    transition: "0.3s"
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Right: Project Info */}
+          <div>
+            <div style={{ display: "flex", gap: "15px", marginBottom: "30px" }}>
+              <a href={projectData.github_link} target="_blank" rel="noreferrer" style={linkButtonStyle}>
+                <FaGithub /> GitHub Repository
+              </a>
+              <a href={projectData.web_link} target="_blank" rel="noreferrer" style={linkButtonStyle}>
+                <FaExternalLinkAlt /> Live Preview
+              </a>
+            </div>
+
+            <h3 style={sectionTitleStyle}>Description</h3>
+            <p style={{ lineHeight: "1.8", color: "rgba(200, 210, 225, 0.7)", marginBottom: "30px", fontWeight: 300 }}>
+              {projectData.description}
+            </p>
+
+            <h3 style={sectionTitleStyle}>Core Technologies</h3>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", marginBottom: "40px" }}>
+              {projectData.details.technology.map((tech, index) => (
+                <div key={index} style={{ textAlign: "center", width: "70px" }}>
+                  <div style={{ 
+                    width: "50px", height: "50px", background: "rgba(255,255,255,0.03)", 
+                    borderRadius: "12px", display: "flex", alignItems: "center", justifyContent: "center",
+                    margin: "0 auto 8px", border: "1px solid rgba(53, 87, 125, 0.2)"
+                  }}>
+                    <img src={tech.tech_logo} alt={tech.tech_name} style={{ width: "28px", height: "28px", filter: "grayscale(20%)" }} />
+                  </div>
+                  <span style={{ fontSize: "11px", color: "rgba(200, 210, 225, 0.5)" }}>{tech.tech_name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Features Section */}
+        <div style={{ marginTop: "60px", background: "rgba(20, 30, 48, 0.5)", borderRadius: "20px", padding: "40px", border: "1px solid rgba(53, 87, 125, 0.1)" }}>
+           <h3 style={{ ...sectionTitleStyle, textAlign: "center", marginBottom: "40px" }}>Key Features & Achievements</h3>
+           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "15px" }}>
+             {projectData.details.key_features.map((feature, index) => (
+               <div key={index} style={{ 
+                 display: "flex", alignItems: "center", gap: "12px", padding: "15px 20px",
+                 background: "rgba(53, 87, 125, 0.05)", borderRadius: "10px", border: "1px solid rgba(53, 87, 125, 0.1)"
+               }}>
+                 <div style={{ minWidth: "8px", height: "8px", borderRadius: "50%", background: "#DB9F75" }} />
+                 <span style={{ fontSize: "14px", color: "rgba(200, 210, 225, 0.8)" }}>{feature}</span>
+               </div>
+             ))}
+           </div>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+// Reusable Styles
+const linkButtonStyle = {
+  display: "flex", alignItems: "center", gap: "10px", padding: "10px 20px",
+  background: "transparent", border: "1px solid #DB9F75", color: "#DB9F75",
+  borderRadius: "30px", fontSize: "13px", fontWeight: 600, transition: "0.3s", cursor: "pointer", textDecoration: "none"
+};
+
+const sectionTitleStyle = {
+  fontFamily: "'Cormorant Garamond', serif", fontSize: "24px", fontWeight: 700, color: "#DB9F75",
+  marginBottom: "15px", letterSpacing: "0.05em"
+};
+
+export default ProjectDetails;
