@@ -106,6 +106,24 @@ const Icon = {
       <path fill="#EEE" d="M24,13v4h-8.9l-.3-4H24zM19.4,21l.2,4H24v-4H19.4zM19.8,27h-4l.3,5.5,7.9,2.6v-4.2l-4.1-1.4L19.8,27z"/>
     </svg>
   ),
+  C: (
+    <svg viewBox="0 0 48 48" width="18" height="18">
+      <path fill="#0277BD" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"/>
+      <path fill="#FFF" d="M25,16c-4.418,0-8,3.582-8,8s3.582,8,8,8c2.209,0,4.209-0.896,5.657-2.343l-2.828-2.829C27.105,25.553,26.105,26,25,26c-1.105,0-2-0.895-2-2s0.895-2,2-2c1.105,0,2.105,0.447,2.829,1.172l2.828-2.829C29.209,16.896,27.209,16,25,16z"/>
+    </svg>
+  ),
+  Cpp: (
+    <svg viewBox="0 0 48 48" width="18" height="18">
+      <path fill="#00599C" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"/>
+      <path fill="#FFF" d="M21,16c-4.418,0-8,3.582-8,8s3.582,8,8,8c2.209,0,4.209-0.896,5.657-2.343l-2.828-2.829C23.105,25.553,22.105,26,21,26c-1.105,0-2-0.895-2-2s0.895-2,2-2c1.105,0,2.105,0.447,2.829,1.172l2.828-2.829C25.209,16.896,23.209,16,21,16z M32,23h-2v-2h-2v2h-2v2h2v2h2v-2h2V23z M39,23h-2v-2h-2v2h-2v2h2v2h2v-2h2V23z"/>
+    </svg>
+  ),
+  Core: (
+    <svg viewBox="0 0 48 48" width="18" height="18">
+      <path fill="#DB9F75" d="M24 4L6 14v20l18 10 18-10V14L24 4zm0 3.8L38.5 15.4v17.2L24 40.2 9.5 32.6V15.4L24 7.8z"/>
+      <path fill="#DB9F75" d="M24 16c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 13c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z"/>
+    </svg>
+  )
 };
 
 // ─── Skill Data ───────────────────────────────────────────────────────────────
@@ -115,36 +133,37 @@ const skillCategories = [
     count: "01",
     skills: [
       { name: "Python",     icon: Icon.Python,   percent: 92 },
+      { name: "C / C++",    icon: Icon.Cpp,      percent: 85 }, // C ও C++ একসাথে
       { name: "JavaScript", icon: Icon.JS,        percent: 90 },
       { name: "TypeScript", icon: Icon.TS,        percent: 82 },
-      { name: "HTML",       icon: Icon.HTML,      percent: 95 },
-      { name: "CSS",        icon: Icon.CSS,       percent: 90 },
+      { name: "HTML / CSS", icon: Icon.HTML,      percent: 95 },
     ],
   },
   {
     label: "Front-End",
     count: "02",
     skills: [
-      { name: "React.js",      icon: Icon.React,    percent: 88 },
-      { name: "Next.js",       icon: Icon.Next,     percent: 85 },
-      { name: "Redux Toolkit", icon: Icon.Redux,    percent: 82 },
-      { name: "Tailwind CSS",  icon: Icon.Tailwind, percent: 92 },
+      { name: "React / Next.js", icon: Icon.React, percent: 88 },
+      { name: "Redux Toolkit",   icon: Icon.Redux, percent: 82 },
+      { name: "Tailwind CSS",    icon: Icon.Tailwind, percent: 92 },
     ],
   },
   {
     label: "Back-End",
     count: "03",
     skills: [
-      { name: "Django",     icon: Icon.Django, percent: 93 },
-      { name: "Django REST",icon: Icon.DRF,    percent: 90 },
+      { name: "Django / DRF", icon: Icon.Django, percent: 93 },
+      { name: "PostgreSQL",   icon: Icon.Postgres, percent: 82 },
+      { name: "Redis",        icon: Icon.Redis,    percent: 75 },
     ],
   },
   {
-    label: "Database",
+    label: "Core Fundamentals",
     count: "04",
     skills: [
-      { name: "PostgreSQL", icon: Icon.Postgres, percent: 82 },
-      { name: "Redis",      icon: Icon.Redis,    percent: 75 },
+      { name: "DSA",            icon: Icon.Core, percent: 80 },
+      { name: "OOP Concept",    icon: Icon.Core, percent: 88 },
+      { name: "System Design",  icon: Icon.Core, percent: 75 },
     ],
   },
   {
@@ -152,12 +171,11 @@ const skillCategories = [
     count: "05",
     skills: [
       { name: "Docker",         icon: Icon.Docker, percent: 85 },
-      { name: "Nginx",          icon: Icon.Nginx,  percent: 78 },
+      { name: "Nginx / VPS",    icon: Icon.Nginx,  percent: 78 },
       { name: "GitHub Actions", icon: Icon.GitHub, percent: 80 },
     ],
   },
 ];
-
 // ─── Single skill bar ─────────────────────────────────────────────────────────
 const SkillBar = ({ name, icon, percent, index, groupIndex }) => {
   const [animated, setAnimated] = useState(false);
