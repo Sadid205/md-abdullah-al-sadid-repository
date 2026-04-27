@@ -95,8 +95,8 @@ const Projects = () => {
       category: "Full-Stack",
       description: "Enterprise SaaS with inventory, HRM, and analytics. 16+ Django apps, JWT, and Docker deployment.",
       github_link: "#",
-      web_link: "https://cloudnextgen.co.uk/",
-      cover: "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=800",
+      web_link: "https://pos.mdabdullahalsadid.com/",
+      cover: "/public/assets/pos.png",
     },
     {
       id: 2,

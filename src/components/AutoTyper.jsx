@@ -1,9 +1,9 @@
-import { Typewriter } from 'react-simple-typewriter'
+import { Typewriter } from 'react-simple-typewriter';
 const AutoTyper = () =>{
     return (
         <div>
-            <h1 className='font-bold text-xl text-white'>I'M A <span> <Typewriter 
-              words={['PROGRAMMER', 'WEB DEVELOPER', 'DJANGO DEVELOPER', 'PROBLEM SOLVER' ,'BACKEND DEVELOPER', 'PASSIONATE PROGRAMMER']}
+            <h1 className='text-xl font-bold text-white'>I'M A <span> <Typewriter 
+              words={['PROGRAMMER','SOFTWARE ENGINEER','WEB DEVELOPER', 'DJANGO DEVELOPER', 'PROBLEM SOLVER' ,'BACKEND DEVELOPER', 'PASSIONATE PROGRAMMER']}
               loop={0}
               cursor
               cursorStyle='_'

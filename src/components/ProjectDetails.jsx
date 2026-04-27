@@ -19,9 +19,9 @@ const ProjectDetails = () => {
     rating: "4.9",
     details: {
       img_and_title: [
-        { img_link: "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80", title: "Dashboard Overview" },
-        { img_link: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80", title: "Inventory Management" },
-        { img_link: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80", title: "Sales Analytics" },
+        { img_link: "/public/assets/pos-order.png", title: "Dashboard Overview" },
+        { img_link: "/public/assets/pos-profile.png", title: "Profile Section" },
+        { img_link: "/public/assets/pos-order.png", title: "Order Section" },
       ],
       technology: [
         { tech_name: "Django", tech_logo: "https://cdn.worldvectorlogo.com/logos/django.svg" },

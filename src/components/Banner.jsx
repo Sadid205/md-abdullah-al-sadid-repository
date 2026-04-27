@@ -78,7 +78,7 @@ const CoderWidget = () => {
   );
 };
 
-const Banner = ({ projectshowcase,services, languages, contact, skills, education, projects }) => {
+const Banner = ({ projectshowcase,services, languages, contact, skills, education, projects,experience }) => {
   return (
     <div className="h-full max-h-screen sm:ms-auto">
       <style>{`
@@ -155,7 +155,7 @@ const Banner = ({ projectshowcase,services, languages, contact, skills, educatio
             }}>
               <div style={{ width: "100%", height: "100%", borderRadius: "50%", overflow: "hidden", background: "#0d1726" }}>
                 <img
-                  src="/assets/Profile.png"
+                  src="/assets/profile.jpg"
                   alt="MD. Abdullah Al Sadid"
                   style={{
                     width: "100%", height: "100%", objectFit: "cover",
@@ -207,6 +207,7 @@ const Banner = ({ projectshowcase,services, languages, contact, skills, educatio
       {services}
       {languages}
       {skills}
+      {experience}
       {education}
       {projects}
       {projectshowcase}

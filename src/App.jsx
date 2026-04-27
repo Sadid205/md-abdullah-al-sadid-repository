@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
 import Banner from "./components/Banner"
 import Contact from "./components/Contact"
 import Education from "./components/Education"
+import Experience from "./components/Experience"
 import Languages from "./components/Languages"
 import Navbar from "./components/Navbar"
 import ProjectDetails from "./components/ProjectDetails"
@@ -18,6 +19,7 @@ function App() {
   <>
     <Banner
       skills={<Skills />}
+      experience={<Experience/>}
       services={<Services />}
       education={<Education />}
       projects={<Projects />}
@@ -30,6 +32,7 @@ function App() {
 />
         <Route path="/languages" element={<Languages/>}/>
         <Route path="/skills" element={<Skills/>}/>
+        <Route path="/experience" element={<Experience/>}/>
         <Route path="/services" element={<Services/>}/>
         <Route path="/education" element={<Education/>}/>
         <Route path="/projects" element={<Projects/>}/>
