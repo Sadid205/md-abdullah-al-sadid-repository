@@ -96,7 +96,7 @@ const Projects = () => {
       description: "Enterprise SaaS with inventory, HRM, and analytics. 16+ Django apps, JWT, and Docker deployment.",
       github_link: "#",
       web_link: "https://pos.mdabdullahalsadid.com/",
-      cover: "/public/assets/pos.png",
+      cover: "/assets/pos.png",
     },
     {
       id: 2,
@@ -105,7 +105,7 @@ const Projects = () => {
       description: "Event-driven architecture using WebSocket and Redis for ball-by-ball live updates.",
       github_link: "https://github.com/sadid-1",
       web_link: "https://cricketscorer.mdabdullahalsadid.com/",
-      cover: "/public/assets/cricket-score.png",
+      cover: "/assets/cricket-score.png",
     },
     {
       id: 3,
@@ -114,7 +114,7 @@ const Projects = () => {
       description: "Monorepo management system with role-based access control and automated reporting.",
       github_link: "#",
       web_link: "https://schoolerp.mdabdullahalsadid.com/",
-      cover: "/public/assets/schoolerp-main.png",
+      cover: "/assets/schoolerp-main.png",
     },
   ];
 

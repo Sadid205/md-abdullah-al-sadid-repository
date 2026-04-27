@@ -13,9 +13,9 @@ const ALL_PROJECTS = [
     web_link: "https://pos.mdabdullahalsadid.com/",
     details: {
       img_and_title: [
-        { img_link: "/public/assets/pos.png", title: "Dashboard Overview" },
-        { img_link: "/public/assets/pos-order.png", title: "Order Management" },
-        { img_link: "/public/assets/pos-profile.png", title: "Profile" },
+        { img_link: "/assets/pos.png", title: "Dashboard Overview" },
+        { img_link: "/assets/pos-order.png", title: "Order Management" },
+        { img_link: "/assets/pos-profile.png", title: "Profile" },
 
       ],
       technology: [
@@ -42,10 +42,10 @@ const ALL_PROJECTS = [
     web_link: "#",
     details: {
       img_and_title: [
-        { img_link: "/public/assets/cricket-home.png", title: "Cricket Home" },
-        { img_link: "/public/assets/cricket-player-details.png", title: "Player Details" },
-        { img_link: "/public/assets/cricket-score.png", title: "Live Match Score" },
-        { img_link: "/public/assets/cricket-scoreboard.png", title: "Cricket Scoreboard" },
+        { img_link: "/assets/cricket-home.png", title: "Cricket Home" },
+        { img_link: "/assets/cricket-player-details.png", title: "Player Details" },
+        { img_link: "/assets/cricket-score.png", title: "Live Match Score" },
+        { img_link: "/assets/cricket-scoreboard.png", title: "Cricket Scoreboard" },
       ],
       technology: [
         { tech_name: "Django", tech_logo: "https://cdn.worldvectorlogo.com/logos/django.svg" },
@@ -71,10 +71,10 @@ const ALL_PROJECTS = [
     web_link: "#",
     details: {
       img_and_title: [
-        { img_link: "/public/assets/schoolerp-main.png", title: "Admin Management Portal" },
-        { img_link: "/public/assets/schoolerp-fees-collection.png", title: "Fees Collection" },
-        { img_link: "/public/assets/schoolerp-class-schedules.png", title: "Class Schedules" },
-        { img_link: "/public/assets/schoolerp-student-admission.png", title: "Student Admission" },
+        { img_link: "/assets/schoolerp-main.png", title: "Admin Management Portal" },
+        { img_link: "/assets/schoolerp-fees-collection.png", title: "Fees Collection" },
+        { img_link: "/assets/schoolerp-class-schedules.png", title: "Class Schedules" },
+        { img_link: "/assets/schoolerp-student-admission.png", title: "Student Admission" },
       ],
       technology: [
         { tech_name: "Django", tech_logo: "https://cdn.worldvectorlogo.com/logos/django.svg" },
