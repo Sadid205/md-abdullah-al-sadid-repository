@@ -104,8 +104,8 @@ const Projects = () => {
       category: "Real-time",
       description: "Event-driven architecture using WebSocket and Redis for ball-by-ball live updates.",
       github_link: "https://github.com/sadid-1",
-      web_link: "#",
-      cover: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=800",
+      web_link: "https://cricketscorer.mdabdullahalsadid.com/",
+      cover: "/public/assets/cricket-score.png",
     },
     {
       id: 3,
@@ -113,8 +113,8 @@ const Projects = () => {
       category: "Full-Stack",
       description: "Monorepo management system with role-based access control and automated reporting.",
       github_link: "#",
-      web_link: "#",
-      cover: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800",
+      web_link: "https://schoolerp.mdabdullahalsadid.com/",
+      cover: "/public/assets/schoolerp-main.png",
     },
   ];
 
