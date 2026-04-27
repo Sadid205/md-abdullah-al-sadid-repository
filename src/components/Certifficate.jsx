@@ -3,7 +3,7 @@ import { useState } from "react";
 const CERTIFICATES = [
   {
     id: 1,
-    title: "Full Stack Web Development & Software Engineering",
+    title: "CSE Fundamentals With Phitron:Fall 2023 Batch-04",
     issuer: "Programming Hero (Phitron)",
     date: "Dec 2023",
     image: "/assets/certificate_phitron.jpg",
