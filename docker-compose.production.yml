@@ -1,0 +1,16 @@
+services:
+  portfolio-frontend:
+    deploy:
+      resources:
+        limits:
+          memory: 800M
+        reservations:
+          memory: 400M
+    image: ghcr.io/sadid205/portfolio-frontend:latest
+    command: >
+      bash -c "
+      npm run preview
+      "
+    ports:
+      - "4174:4173"
+    restart: unless-stopped

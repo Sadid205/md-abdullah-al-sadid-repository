@@ -3,7 +3,7 @@ services:
     build:
       network: host
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     volumes:
       - .:/app
       - /app/node_modules
