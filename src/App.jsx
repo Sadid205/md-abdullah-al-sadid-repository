@@ -1,24 +1,39 @@
-import { BrowserRouter as Router,Route,Routes } from "react-router-dom"
-import Navbar from "./components/Navbar"
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
 import Banner from "./components/Banner"
-import Services from "./components/Services"
-import Languages from "./components/Languages"
-import Skills from "./components/Skills"
-import Education from "./components/Education"
-import Projects from "./components/Projects"
 import Contact from "./components/Contact"
+import Education from "./components/Education"
+import Languages from "./components/Languages"
+import Navbar from "./components/Navbar"
 import ProjectDetails from "./components/ProjectDetails"
+import Projects from "./components/Projects"
+import ProjectsShowCase from "./components/ProjectShowcase"
+import Services from "./components/Services"
+import Skills from "./components/Skills"
 function App() {
   return (
     <Router>
     <Navbar/>
       <Routes>
-        <Route path="/" element={<Banner skills={<Skills/>} services={<Services/>} education={<Education/>} projects={<Projects/>} contact={<Contact/>} languages={<Languages/>}/> }/>
-        <Route path="/services" element={<Services/>}/>
+        <Route path="/" element={
+  <>
+    <Banner
+      skills={<Skills />}
+      services={<Services />}
+      education={<Education />}
+      projects={<Projects />}
+      contact={<Contact />}
+      languages={<Languages />}
+      projectshowcase={<ProjectsShowCase />}
+    />
+  </>
+}
+/>
         <Route path="/languages" element={<Languages/>}/>
         <Route path="/skills" element={<Skills/>}/>
+        <Route path="/services" element={<Services/>}/>
         <Route path="/education" element={<Education/>}/>
         <Route path="/projects" element={<Projects/>}/>
+        <Route path="/projects-showcase" element={<ProjectsShowCase/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/project-details/:project_id" element={<ProjectDetails/>}/>
       </Routes>

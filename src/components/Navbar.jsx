@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaFileDownload } from "react-icons/fa";
 import { FaHouseChimneyUser } from "react-icons/fa6";
 import { GiSkills } from "react-icons/gi";
-import { GrProjects, GrServices } from "react-icons/gr";
+import { GrCodeSandbox, GrProjects, GrServices } from "react-icons/gr";
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
 import { IoIosContact } from "react-icons/io";
 import { LuLanguages } from "react-icons/lu";
@@ -35,6 +35,14 @@ const Navbar = ()=>{
                                     <GrProjects />
                                     <div className="absolute -top-1 -right-16">
                                         <p className={`text-xs opacity-0 ${location.pathname=="/projects"?("opacity-100"):("")} group-hover:opacity-100 transition-all ease-in duration-200 font-bold text-blue-400`}>PROJECTS</p>
+                                    </div>
+                                </div>
+                            </Link>
+                             <Link to={"/projects-showcase"} className={`flex ${location.pathname=="/projects-showcase"?("scale-125"):("")} hover:scale-125 transition-all ease-in duration-100 invisible sm:visible justify-center`}>
+                                <div className="relative text-2xl text-white group">
+                                    <GrCodeSandbox />
+                                    <div className="absolute -top-1 -right-16">
+                                        <p className={`text-xs opacity-0 ${location.pathname=="/projects-showcase"?("opacity-100"):("")} group-hover:opacity-100 transition-all ease-in duration-200 font-bold text-blue-400`}>PROJECTS SHOWCASE</p>
                                     </div>
                                 </div>
                             </Link>
