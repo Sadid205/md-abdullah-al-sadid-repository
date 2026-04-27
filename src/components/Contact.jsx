@@ -86,7 +86,7 @@ const Contact = () => {
             <ContactInfoItem 
               icon={<FaEnvelope />} 
               label="Email" 
-              value="abdullahalsadid1914@gmail.com" 
+              value="contact@mdabdullahalsadid.com" 
             />
             <ContactInfoItem 
               icon={<FaWhatsapp />} 

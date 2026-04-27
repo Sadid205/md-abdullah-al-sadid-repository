@@ -106,7 +106,7 @@ const Education = () => {
     { 
       degree: "Higher Secondary Certificate (HSC)", 
       institute: "Kustia Islamia College, Kustia", 
-      year: "2022" 
+      year: "2021" 
     },
     { 
       degree: "Secondary School Certificate (SSC)", 

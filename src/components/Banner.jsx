@@ -78,7 +78,7 @@ const CoderWidget = () => {
   );
 };
 
-const Banner = ({ projectshowcase,services, languages, contact, skills, education, projects,experience }) => {
+const Banner = ({ globalcommits,certificate,projectshowcase,services, languages, contact, skills, education, projects,experience }) => {
   return (
     <div className="h-full max-h-screen sm:ms-auto">
       <style>{`
@@ -211,6 +211,8 @@ const Banner = ({ projectshowcase,services, languages, contact, skills, educatio
       {education}
       {projects}
       {projectshowcase}
+      {certificate}
+      {globalcommits}
       {contact}
     </div>
   );
