@@ -90,7 +90,67 @@ const ALL_PROJECTS = [
         "Scalable modular design for future modules"
       ]
     }
+  },
+  {
+  id: 4,
+  name: "Parcel Delivery System",
+  category: "Logistics / Microservices",
+  description: "A scalable parcel delivery and tracking system designed with a microservices-friendly architecture. It enables real-time parcel tracking, status updates, and efficient delivery management.",
+  github_link: "https://github.com/Sadid205/parcel-delivery-system-dockerized",
+  web_link: "#",
+  details: {
+    img_and_title: [
+      { img_link: "/assets/parcel-me.png", title: "Profile" },
+      { img_link: "/assets/parcel-about.png", title: "Parcel About" },
+      { img_link: "/assets/parcel-contact.png", title: "Parcel Contact" },
+      { img_link: "/assets/parcel-create.png", title: "Parcel Create" },
+    ],
+    technology: [
+      { tech_name: "Node.js", tech_logo: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" },
+      { tech_name: "Express", tech_logo: "https://cdn.worldvectorlogo.com/logos/express-109.svg" },
+      { tech_name: "MongoDB", tech_logo: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" },
+      { tech_name: "Docker", tech_logo: "https://cdn.worldvectorlogo.com/logos/docker.svg" },
+      { tech_name: "Redis", tech_logo: "https://cdn.worldvectorlogo.com/logos/redis.svg" },
+    ],
+    key_features: [
+      "Unique parcel tracking ID system",
+      "Real-time parcel status updates",
+      "Event-based tracking logs",
+      "Dockerized multi-service architecture",
+      "Redis caching for performance optimization"
+    ]
   }
+},
+{
+  id: 5,
+  name: "Library Management System",
+  category: "Management System / Full Stack",
+  description: "A full-featured library management system for handling books, users, borrowing, and return workflows. Built with a containerized architecture for easy deployment and scalability.",
+  github_link: "https://github.com/Sadid205/library-management-dockerized",
+  web_link: "#",
+  details: {
+    img_and_title: [
+      { img_link: "/assets/library-1.png", title: "Book List" },
+      { img_link: "/assets/library-borrow.png", title: "Borrow Book" },
+      { img_link: "/assets/library-update-book.png", title: "Update Book" },
+      { img_link: "/assets/library-borrow-book.png", title: "Borrow Book" },
+    ],
+    technology: [
+      { tech_name: "Django", tech_logo: "https://cdn.worldvectorlogo.com/logos/django.svg" },
+      { tech_name: "Django REST Framework", tech_logo: "https://www.django-rest-framework.org/img/logo.png" },
+      { tech_name: "PostgreSQL", tech_logo: "https://cdn.worldvectorlogo.com/logos/postgresql.svg" },
+      { tech_name: "Docker", tech_logo: "https://cdn.worldvectorlogo.com/logos/docker.svg" },
+      { tech_name: "Nginx", tech_logo: "https://cdn.worldvectorlogo.com/logos/nginx-1.svg" },
+    ],
+    key_features: [
+      "Book catalog and inventory management",
+      "Borrow and return tracking system",
+      "Fine calculation for late returns",
+      "Role-based authentication system",
+      "Dockerized deployment with Nginx reverse proxy"
+    ]
+  }
+}
 ];
 const ProjectDetails = () => {
   const { project_id } = useParams(); // URL থেকে ID পাবে (যেমন: /projects/1)
