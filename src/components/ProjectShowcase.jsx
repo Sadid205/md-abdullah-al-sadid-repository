@@ -40,6 +40,30 @@ const PROJECTS = [
     description:
       "A real-time cricket scoring application built with Django Channels and WebSocket for live score updates. Features ball-by-ball tracking, innings management, player statistics, and live scorecard. Fully Dockerized with a production-ready setup and automated CI/CD pipeline via GitHub Actions.",
   },
+  {
+  id: 4,
+  name: "Parcel Delivery System",
+  github: "https://github.com/Sadid205/parcel-delivery-system-dockerized",
+  tools: [
+    "TypeScript", "Node.js", "Express.js", "React.js",
+    "Docker", "GitHub Actions", "PostgreSQL",
+  ],
+  myRole: "Full Stack Developer",
+  description:
+    "A full-stack parcel delivery management system built with TypeScript for both frontend and backend. Features parcel tracking, delivery management, and status updates. Fully Dockerized with production-ready Docker Compose setup and automated CI/CD pipeline via GitHub Actions.",
+},
+{
+  id: 5,
+  name: "Library Management System",
+  github: "https://github.com/Sadid205/library-management-dockerized",
+  tools: [
+    "TypeScript", "Node.js", "Express.js", "React.js",
+    "Docker", "GitHub Actions", "PostgreSQL",
+  ],
+  myRole: "Full Stack Developer",
+  description:
+    "A full-stack library management system built with TypeScript for both frontend and backend. Features book management, member tracking, and borrowing records. Fully Dockerized with production-ready Docker Compose setup and automated CI/CD pipeline via GitHub Actions.",
+},
   // নতুন প্রজেক্ট যোগ করতে এখানে আরেকটা object add করুন
 ];
 

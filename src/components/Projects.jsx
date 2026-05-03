@@ -116,6 +116,24 @@ const Projects = () => {
       web_link: "https://schoolerp.mdabdullahalsadid.com/",
       cover: "/assets/schoolerp-main.png",
     },
+    {
+    id: 4,
+    name: "Parcel Delivery System",
+    category: "Full-Stack",
+    description: "Full-stack parcel delivery platform with TypeScript, Docker Compose, and CI/CD pipeline via GitHub Actions.",
+    github_link: "https://github.com/Sadid205/parcel-delivery-system-dockerized",
+    web_link: "https://parcel-delivery-system.mdabdullahalsadid.com/",
+    cover: "/assets/parcel-home.png",
+  },
+  {
+    id: 5,
+    name: "Library Management System",
+    category: "Full-Stack",
+    description: "Dockerized library management app with TypeScript frontend and backend, automated CI/CD deployment using GitHub Actions.",
+    github_link: "https://github.com/Sadid205/library-management-dockerized",
+    web_link: "https://library-management.mdabdullahalsadid.com/",
+    cover: "/assets/library-home.png",
+  },
   ];
 
   const allCategory = ["all", ...new Set(ProjectsData.map((item) => item.category))];
